@@ -1,0 +1,42 @@
+﻿@model TruckSmartWeb.Models.Shipment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Shipment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Scheduled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Scheduled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shipped)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shipped)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Completed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Completed)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ShipmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

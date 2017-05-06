@@ -1,0 +1,61 @@
+﻿@model IEnumerable<TruckSmartWeb.Models.Expense>
+
+@{
+    ViewBag.Title = "Expenses";
+}
+
+<h2>Expenses</h2>
+<div class="row">
+    <form method="post" action="/Expense/GetExpenses"></form>
+    <div class="col-md-6">
+ 
+            <fieldset>
+                <legend>Filter by Date</legend>
+                <div class="col-sm-2">From</div>
+                <div class="col-sm-4"><input type="date" name="From" id="From" /></div>
+                <div class="col-sm-2">To</div>
+                <div class="col-sm-4"><input type="date" name="To" id="To" /></div>
+                <a href="#" id="filterByDate" class="filterLink">Filter</a>
+            </fieldset>
+
+    </div>
+    <div class="col-md-6">
+        <fieldset>
+            <legend>Filter by Trip</legend>
+            <div class="col-sm-12">
+                @Html.DropDownList("Shipments", new SelectList(ViewBag.Shipments, "ShipmentID", "Scheduled"), new{id="shipmentList" })
+            </div>
+            <a href="#" id="filterByShipment" class="filterLink">Filter</a>
+        </fieldset>
+    </div>
+</div>
+<div id="expenseList">
+    @Html.Partial("ExpenseList", Model)
+</div>
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var action, data;
+            $(".filterLink").click(function (e) {
+                if ($(this).attr("id") == "filterByDate") {
+                    action = "/Expense/FilterByDate";
+                    data = { From: $("#From").val(), To: $("#To").val() };
+                } else {
+                    action = "/Expense/FilterByShipment";
+                    data = { ShipmentID: $("#shipmentList").val() };
+
+                }
+                $.post(action, data).done(function (data) {
+                    $("#expenseList").html(data);
+                });
+                if (e.preventDefault) {
+                    e.preventDefault();
+                }
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                }
+                return false;
+            });
+        });
+    </script>
+    }

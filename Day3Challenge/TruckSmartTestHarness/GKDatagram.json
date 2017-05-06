@@ -1,0 +1,16 @@
+{
+    "DriverID": "83cc4c1a-390a-4f97-9484-b576d3fd5f2a",
+    "ShipmentID": "17f556fa-f6b1-44cc-9dd6-c8fc0b542de5",
+    "Date": "2017-04-03T11:49:40.3817838-04:00",
+    "Start": {
+        "Latitude": 33.8852989,
+        "Longitude": -84.4616176
+    },
+    "End": {
+        "Latitude": 35.7292244,
+        "Longitude": -78.7977376
+    },
+    "Delivered": true,
+    "ServerAddress": "127.0.0.1",
+    "ClientAddress": "127.0.0.1"
+}
