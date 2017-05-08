@@ -1,0 +1,13 @@
+D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTypes\bin\Debug\TruckSmartTypes.dll
+D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTypes\bin\Debug\TruckSmartTypes.pdb
+D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTypes\obj\Debug\TruckSmartTypes.dll
+D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTypes\obj\Debug\TruckSmartTypes.pdb
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day3Challenge\TruckSmartTypes\bin\Debug\TruckSmartTypes.dll
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day3Challenge\TruckSmartTypes\bin\Debug\TruckSmartTypes.pdb
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day3Challenge\TruckSmartTypes\obj\Debug\TruckSmartTypes.dll
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day3Challenge\TruckSmartTypes\obj\Debug\TruckSmartTypes.pdb
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day3Challenge\TruckSmartTypes\obj\Debug\TruckSmartTypes.csprojResolveAssemblyReference.cache
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTypes\bin\Debug\TruckSmartTypes.dll
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTypes\bin\Debug\TruckSmartTypes.pdb
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTypes\obj\Debug\TruckSmartTypes.dll
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTypes\obj\Debug\TruckSmartTypes.pdb

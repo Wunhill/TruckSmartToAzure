@@ -1,0 +1,103 @@
+﻿@model TruckSmartWeb.Controllers.DriverData
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h3>Your shipments</h3>
+<table class="table">
+    <tr>
+        <th>Shipper</th>
+        <th>To</th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyShipments[0].Scheduled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyShipments[0].Shipped)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyShipments[0].Completed)
+        </th>
+        <th></th>
+    </tr>
+@{
+    List<TruckSmartWeb.Models.Shipment> mine = Model.MyShipments;
+}
+@foreach (var item in mine) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.From.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.To.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Scheduled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shipped)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Completed)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "DisplayShipment", new { id=item.ShipmentID })
+            @if (item.Scheduled > DateTime.Now.AddDays(3))
+            {
+                <text> | </text>
+             @Html.ActionLink("Release", "ReleaseShipment", new { id = item.ShipmentID })
+            }
+        </td>
+    </tr>
+}
+
+</table>
+
+<h3>Available shipments</h3>
+<table class="table">
+    <tr>
+        <th>Shipper</th>
+        <th>To</th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyShipments[0].Scheduled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyShipments[0].Shipped)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyShipments[0].Completed)
+        </th>
+        <th></th>
+    </tr>
+    @{
+        List<TruckSmartWeb.Models.Shipment> available = Model.OpenShipments;
+    }
+    @foreach (var item in available)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.From.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.To.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Scheduled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shipped)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Completed)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "DisplayShipment", new { id = item.ShipmentID })
+ | 
+                    @Html.ActionLink("Reserve", "ReserveShipment", new { id = item.ShipmentID })
+                
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,6 @@
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTestUsers\bin\Debug\TestUsers.csv
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTestUsers\bin\Debug\TruckSmartTestUsers.exe.config
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTestUsers\bin\Debug\TruckSmartTestUsers.exe
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTestUsers\bin\Debug\TruckSmartTestUsers.pdb
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTestUsers\obj\Debug\TruckSmartTestUsers.exe
+D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTestUsers\obj\Debug\TruckSmartTestUsers.pdb

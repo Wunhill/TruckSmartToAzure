@@ -1,0 +1,71 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar {
+    background-image: url('images/Wunhill-Logo.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-color:rgb(63, 63, 63);
+    /*height: 70px;*/
+    /*background-position:right;*/
+}
+
+.tile {
+    border-radius:20px;
+    border:2px blue solid;
+    height:200px;
+    color:rgb(255, 255, 255);
+    margin:0px 0px 3px 0px;
+    padding:5px;
+}
+.tile-mousedown {
+    margin:3px 0 0 3px;
+}
+.tile:hover{
+    color:rgb(221, 124, 18);
+}
+.tile-shipment {
+    background-color:rgb(63, 63, 63);
+}
+.tile-profile {
+    background-color:rgb(231, 159, 15);
+}
+.tile-profile:hover{
+    color:rgb(63, 63, 63);
+}
+.tile-expense {
+    background-color:rgb(91, 91, 91);
+}
+.jumbotron {
+    /*background-image: url('images/openroad.jpg');
+    background-repeat: no-repeat;
+    background-size:contain;*/
+    color:rgb(155, 155, 155);
+    background-color:rgb(63, 63, 63);
+    text-align:center;
+    
+}
+
+
+
+@media screen and (max-width:992px) {
+    .tile {
+        height:auto;
+        border-radius:7px;
+    }
+}

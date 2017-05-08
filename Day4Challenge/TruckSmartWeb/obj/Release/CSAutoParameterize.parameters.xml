@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-TruckSmartWeb-20170407122613.mdf;Initial Catalog=aspnet-TruckSmartWeb-20170407122613;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Courses\\4480\ -\ Azure\ Dev\ Bootcamp\\Day2Challenge\\TruckSmartWeb\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="TruckSmartDB-Web.config Connection String" description="TruckSmartDB Connection String used in web.config by the application to access the database." defaultValue="Data Source=.;Initial Catalog=TruckSmart;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Courses\\4480\ -\ Azure\ Dev\ Bootcamp\\Day2Challenge\\TruckSmartWeb\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TruckSmartDB']/@connectionString" />
+  </parameter>
+</parameters>
