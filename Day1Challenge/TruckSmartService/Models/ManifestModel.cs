@@ -32,7 +32,7 @@ namespace TruckSmartService.Models
                     Math.Sin(dLon / 2) * Math.Sin(dLon / 2) * Math.Cos(lat1) * Math.Cos(lat2);
             var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
             var distance = earthRadiusKm * c;
-            var output =  new ManifestResponse() { ServerAddress = datagram.ServerAddress, ClientAddress = datagram.ClientAddress, Distance = distance, Status = distance < 1000 ? ManifestStatus.Accepted : ManifestStatus.Pending };
+            var output =  new ManifestResponse() { ServerAddress = System.Environment.MachineName, ClientAddress = datagram.ClientAddress, Distance = distance, Status = distance < 1000 ? ManifestStatus.Accepted : ManifestStatus.Pending };
             saveData(datagram, output);
             return output;
         }
