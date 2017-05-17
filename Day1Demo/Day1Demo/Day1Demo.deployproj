@@ -31,12 +31,9 @@
     <Content Include="Deploy-AzureResourceGroup.ps1" />
     <Content Include="WindowsVirtualMachine.json" />
     <Content Include="WindowsVirtualMachine.parameters.json" />
-    <Content Include="DSC\vm1DSC.ps1" />
-    <Content Include="DSC\vmDSC2.ps1" />
-    <Content Include="DSC\anothertry.ps1" />
-    <Content Include="DSC\vmDSC1.ps1" />
-    <None Include="parameters.json" />
-    <None Include="template.json" />
+    <Content Include="parameters.json" />
+    <Content Include="template.json" />
+    <Content Include="DSC\installWeb.ps1" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>

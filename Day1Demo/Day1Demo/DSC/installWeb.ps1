@@ -3,16 +3,41 @@ Configuration Main
 
 Param ( [string] $nodeName )
 
-Import-DscResource -ModuleName PSDesiredStateConfiguration
+Import-DscResource -ModuleName PSDesiredStateConfiguration, xPSDesiredStateConfiguration
 
 Node $nodeName
   {
-   <# This commented section represents an example configuration that can be updated as required.
     WindowsFeature WebServerRole
     {
       Name = "Web-Server"
       Ensure = "Present"
+    }   
+	WindowsFeature ASPNet45
+    {
+      Name = "Web-Asp-Net45"
+      Ensure = "Present"
     }
+	File SourceDir {
+	  DestinationPath = "c:\ManifestSource\"
+	  Ensure="Present"
+	  Type="Directory"
+	  DependsOn = "[WindowsFeature]WebServerRole"
+	  Force = $true
+	}
+	xRemoteFile ManifestSource {
+	  Uri = "https://github.com/Wunhill/TruckSmartToAzure/blob/master/Day1Challenge/TruckSmartManifest.zip?raw=true"
+	  DestinationPath = "c:\ManifestSource\TruckSmartManifest.zip"
+	  MatchSource = $false
+      DependsOn = "[File]SourceDir"
+      
+	}
+	Archive DeploySite {
+	  DependsOn =   "[xRemoteFile]ManifestSource"
+	  Path = 		"c:\ManifestSource\TruckSmartManifest.zip"
+	  Destination = "C:\inetpub\wwwroot"
+	}
+	<# This commented section represents an example configuration that can be updated as required.
+
     WindowsFeature WebManagementConsole
     {
       Name = "Web-Mgmt-Console"
@@ -23,11 +48,7 @@ Node $nodeName
       Name = "Web-Mgmt-Service"
       Ensure = "Present"
     }
-    WindowsFeature ASPNet45
-    {
-      Name = "Web-Asp-Net45"
-      Ensure = "Present"
-    }
+
     WindowsFeature HTTPRedirection
     {
       Name = "Web-Http-Redirect"
