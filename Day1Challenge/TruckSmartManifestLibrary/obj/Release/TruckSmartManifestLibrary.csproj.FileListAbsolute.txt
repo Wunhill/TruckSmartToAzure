@@ -1,9 +1,0 @@
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartManifestLibrary\bin\Release\TruckSmartManifestLibrary.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartManifestLibrary\bin\Release\TruckSmartManifestLibrary.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartManifestLibrary\bin\Release\Newtonsoft.Json.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartManifestLibrary\bin\Release\TruckSmartTypes.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartManifestLibrary\bin\Release\TruckSmartTypes.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartManifestLibrary\bin\Release\Newtonsoft.Json.xml
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartManifestLibrary\obj\Release\TruckSmartManifestLibrary.csprojResolveAssemblyReference.cache
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartManifestLibrary\obj\Release\TruckSmartManifestLibrary.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartManifestLibrary\obj\Release\TruckSmartManifestLibrary.pdb

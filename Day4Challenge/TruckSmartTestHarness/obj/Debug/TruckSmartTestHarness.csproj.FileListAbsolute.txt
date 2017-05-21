@@ -54,3 +54,13 @@ D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTest
 D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.csprojResolveAssemblyReference.cache
 D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.exe
 D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day4Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.pdb
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day4Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.exe.config
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day4Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.exe
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day4Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.pdb
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day4Challenge\TruckSmartTestHarness\bin\Debug\System.Net.Http.Formatting.dll
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day4Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTypes.dll
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day4Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTypes.pdb
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day4Challenge\TruckSmartTestHarness\bin\Debug\System.Net.Http.Formatting.xml
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day4Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.csprojResolveAssemblyReference.cache
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day4Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.exe
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day4Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.pdb

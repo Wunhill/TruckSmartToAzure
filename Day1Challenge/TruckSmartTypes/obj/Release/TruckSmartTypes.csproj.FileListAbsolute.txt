@@ -1,5 +1,0 @@
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTypes\bin\Release\TruckSmartTypes.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTypes\bin\Release\TruckSmartTypes.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTypes\obj\Release\TruckSmartTypes.csprojResolveAssemblyReference.cache
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTypes\obj\Release\TruckSmartTypes.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTypes\obj\Release\TruckSmartTypes.pdb

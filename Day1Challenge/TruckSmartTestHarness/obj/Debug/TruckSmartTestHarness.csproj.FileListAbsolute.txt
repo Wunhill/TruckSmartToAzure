@@ -1,40 +1,8 @@
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.exe.config
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.exe
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmartTestHarness\bin\Debug\Newtonsoft.Json.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmartTestHarness\bin\Debug\TruckSmartManifestLibrary.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmartTestHarness\bin\Debug\TruckSmartManifestLibrary.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmartTestHarness\bin\Debug\Newtonsoft.Json.xml
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.csprojResolveAssemblyReference.cache
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.exe
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.csprojResolveAssemblyReference.cache
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.exe
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.exe.config
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.exe
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\bin\Debug\Newtonsoft.Json.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\bin\Debug\TruckSmartTypes.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\bin\Debug\TruckSmartTypes.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\bin\Debug\Newtonsoft.Json.xml
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\bin\Debug\System.Net.Http.Formatting.dll
-D:\Courses\4480 - Azure Dev Bootcamp\TruckSmart\TruckSmartTestHarness\bin\Debug\System.Net.Http.Formatting.xml
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.exe.config
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.exe
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.exe
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\bin\Debug\Newtonsoft.Json.dll
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\bin\Debug\System.Net.Http.Formatting.dll
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTypes.dll
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTypes.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\bin\Debug\Newtonsoft.Json.xml
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\bin\Debug\System.Net.Http.Formatting.xml
-D:\Courses\4480 - Azure Dev Bootcamp\ChallengeFiles\Day1Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.csprojResolveAssemblyReference.cache
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.exe.config
-D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.exe
-D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.pdb
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.csprojResolveAssemblyReference.cache
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\CHItoDALDatagram.json
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\GKDatagram.json
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\NYtoCADatagram.json
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.exe
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTestHarness.pdb
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\Newtonsoft.Json.dll
@@ -43,10 +11,5 @@ D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\Truc
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\TruckSmartTypes.pdb
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\Newtonsoft.Json.xml
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\System.Net.Http.Formatting.xml
-D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
-D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\CHItoDALDatagram.json
-D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\GKDatagram.json
-D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\NYtoCADatagram.json
-=======
->>>>>>> master
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.exe
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.pdb
