@@ -14,7 +14,13 @@ namespace TruckSmartWeb.Models
         //    var init = new TruckSmartDBInitializer();
         //    init.InitializeDatabase(new TruckSmartContext());
         //}
+<<<<<<< HEAD
+
+        #region Standard initialization
+        public TruckSmartContext():base("name=TruckSmartDB")
+=======
         public TruckSmartContext() : base("name=TruckSmartDB")
+>>>>>>> master
         {
 
         }
@@ -22,6 +28,9 @@ namespace TruckSmartWeb.Models
         {
 
         }
+        #endregion
+
+        #region DBSet properties
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Contractor> Contractors { get; set; }
         public DbSet<Shipment> Shipments { get; set; }

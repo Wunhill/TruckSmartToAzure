@@ -13,36 +13,45 @@ namespace TruckSmartTestHarness
 {
     class Program
     {
-        static  void Main(string[] args)
+        static void Main(string[] args)
         {
             string serverFQDN = string.Empty;
             string trip = string.Empty;
-            string[] trips = { "GK","NYtoCA","CHItoDAL" };
-            if(args.Length>0)
+            string[] trips = { "GK", "NYtoCA", "CHItoDAL" };
+
+            #region command line parameter parsing
+            //If command line parameters are included, the first is the FQDN and the second is the test datagram
+            if (args.Length > 0)
             {
                 serverFQDN = args[0];
-                if (args.Length>1)
+                if (args.Length > 1)
                 {
                     int tripArg = -1;
-                    if(int.TryParse(args[1],out tripArg))
+                    if (int.TryParse(args[1], out tripArg))
                     {
-                        if(tripArg>=0 && tripArg<trips.Length)
+                        if (tripArg >= 0 && tripArg < trips.Length)
                         {
                             trip = trips[tripArg];
                         }
-                    } else
+                    }
+                    else
                     {
                         trip = args[1];
                     }
                 }
             }
-            while(serverFQDN==string.Empty)
+            #endregion
+
+            #region User input for serverFQDN
+            while (serverFQDN == string.Empty)
             {
                 Console.Write("Enter the FQDN of the manifest server and press enter:");
                 serverFQDN = Console.ReadLine();
             }
-            
-            while (trip==string.Empty)
+            #endregion
+
+            #region User inut for Datagram (by number)
+            while (trip == string.Empty)
             {
                 Console.WriteLine("Enter the number for a test manifest and press enter:");
                 Console.WriteLine("\t0 - GK Delivery (Cary, NC to Atlanta, GA)");
@@ -51,15 +60,17 @@ namespace TruckSmartTestHarness
                 string tripInput = Console.ReadLine();
                 int tripArg = -1;
                 int.TryParse(tripInput, out tripArg);
-                if (tripArg>=0 && tripArg<trips.Length)
+                if (tripArg >= 0 && tripArg < trips.Length)
                 {
                     trip = trips[tripArg];
                 }
 
             }
+            #endregion
+
             string baseFolder = System.Configuration.ConfigurationManager.AppSettings["TestDatagramFolder"];
-            string outputFileName = string.Format("{0}{1}Result.json",baseFolder, trip);
-            string inputFileName = string.Format("{0}{1}Datagram.json",baseFolder, trip);
+            string outputFileName = string.Format("{0}Result-{1:yyyyMMdd-T-HHmmss}.json", baseFolder, DateTime.Now);
+            string inputFileName = string.Format("{0}{1}Datagram.json", baseFolder, trip);
 
             var datagram = JsonConvert.DeserializeObject<ManifestRequest>(File.ReadAllText(inputFileName));
             datagram.ServerAddress = serverFQDN;
@@ -70,19 +81,22 @@ namespace TruckSmartTestHarness
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             Task.Run(async () =>
             {
-                await SendDatagram(datagram, outputFileName, inputFileName, client);
-            });
+                try
+                {
+                    var response = await client.PostAsJsonAsync("api/manifest", datagram);
+                    var result = await response.Content.ReadAsAsync<ManifestResponse>();
+                    var output = JsonConvert.SerializeObject(result, Formatting.Indented);
+                    Console.WriteLine("Result:\n{0}", output);
+                    File.WriteAllText(outputFileName, output);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("There was an error processing the manifest: \n{0}", ex.ToString());
+                }
+            }).Wait();
             Console.WriteLine("Done. Click Enter to close");
             Console.ReadLine();
 
-        }
-
-        private static async Task SendDatagram(ManifestRequest datagram, string outputFileName, string inputFileName, HttpClient client)
-        {
-            var response = await client.PostAsJsonAsync("api/manifest", datagram);
-            var result = await response.Content.ReadAsAsync<ManifestResponse>();
-            //File.WriteAllText(inputFileName, JsonConvert.SerializeObject(datagram));
-            File.WriteAllText(outputFileName, JsonConvert.SerializeObject(result));
         }
     }
 }

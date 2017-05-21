@@ -44,3 +44,9 @@ D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\Truc
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\Newtonsoft.Json.xml
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\System.Net.Http.Formatting.xml
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\obj\Debug\TruckSmartTestHarness.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\CHItoDALDatagram.json
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\GKDatagram.json
+D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day1Challenge\TruckSmartTestHarness\bin\Debug\NYtoCADatagram.json
+=======
+>>>>>>> master
