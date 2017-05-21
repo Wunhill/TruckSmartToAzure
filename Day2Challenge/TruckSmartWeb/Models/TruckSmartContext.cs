@@ -6,17 +6,21 @@ using System.Web;
 
 namespace TruckSmartWeb.Models
 {
-    public class TruckSmartContext:DbContext
+    public class TruckSmartContext : DbContext
     {
-
+        #region Database context configuration
         //static TruckSmartContext()
         //{
         //    var init = new TruckSmartDBInitializer();
         //    init.InitializeDatabase(new TruckSmartContext());
         //}
+<<<<<<< HEAD
 
         #region Standard initialization
         public TruckSmartContext():base("name=TruckSmartDB")
+=======
+        public TruckSmartContext() : base("name=TruckSmartDB")
+>>>>>>> master
         {
 
         }
@@ -52,7 +56,7 @@ namespace TruckSmartWeb.Models
         {
             var shipment = Shipments.Include(s => s.Driver).Where(s => s.ShipmentID == id).First();
             //Check to make sure it is not already reserved
-            if(shipment.Driver!=null)
+            if (shipment.Driver != null)
             {
                 throw new InvalidOperationException("This shipment is already reserved");
             }
@@ -65,7 +69,7 @@ namespace TruckSmartWeb.Models
         public Shipment ReleaseShipment(Guid id)
         {
             var shipment = Shipments.Include(s => s.Driver).Include(s => s.From).Include(s => s.To).Where(s => s.ShipmentID == id).First();
-            if((shipment.Driver == null) || (shipment.Driver.ContractorID != WebApiApplication.CurrentUser))
+            if ((shipment.Driver == null) || (shipment.Driver.ContractorID != WebApiApplication.CurrentUser))
             {
                 throw new InvalidOperationException("This shipment is not reserved for the current driver.");
             }
@@ -89,7 +93,7 @@ namespace TruckSmartWeb.Models
             but it serves our purposes here.
             */
             var providers = GetProviders();
-            var id = (int) Math.Truncate(((new Random()).NextDouble() * (double)providers.Count));
+            var id = (int)Math.Truncate(((new Random()).NextDouble() * (double)providers.Count));
             return providers[id];
         }
         #endregion
