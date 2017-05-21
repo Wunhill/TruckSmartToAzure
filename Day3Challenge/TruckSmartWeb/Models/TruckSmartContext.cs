@@ -14,7 +14,7 @@ namespace TruckSmartWeb.Models
         #region redis setup
         //private static Lazy<ConnectionMultiplexer> lazyConnection = new Lazy<ConnectionMultiplexer>(() =>
         //{
-        //    string cacheConnection = ConfigurationManager.ConnectionStrings["redis"].ConnectionString;
+        //    string cacheConnection = ConfigurationManager.AppSettings["redis"];
         //    return ConnectionMultiplexer.Connect(cacheConnection);
         //});
 
@@ -29,11 +29,11 @@ namespace TruckSmartWeb.Models
         #endregion
 
         #region Database initialization
-        static TruckSmartContext()
-        {
-            var init = new TruckSmartDBInitializer();
-            init.InitializeDatabase(new TruckSmartContext());
-        }
+        //static TruckSmartContext()
+        //{
+        //    var init = new TruckSmartDBInitializer();
+        //    init.InitializeDatabase(new TruckSmartContext());
+        //}
         #endregion
 
         #region Context object initialization
@@ -158,7 +158,9 @@ namespace TruckSmartWeb.Models
             return NewExpense;
         }
 
-
+        /// <summary>
+        /// The generateExpenses method just dumps a bunch of random expenses into the expense table.
+        /// </summary>
         private void generateExpenses()
         {
 

@@ -57,9 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="CHItoDALDatagram.json" />
-    <None Include="GKDatagram.json" />
-    <None Include="NYtoCADatagram.json" />
+    <Content Include="CHItoDALDatagram.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GKDatagram.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NYtoCADatagram.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

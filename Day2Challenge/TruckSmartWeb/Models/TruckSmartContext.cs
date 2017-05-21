@@ -14,6 +14,8 @@ namespace TruckSmartWeb.Models
         //    var init = new TruckSmartDBInitializer();
         //    init.InitializeDatabase(new TruckSmartContext());
         //}
+
+        #region Standard initialization
         public TruckSmartContext():base("name=TruckSmartDB")
         {
 
@@ -22,12 +24,17 @@ namespace TruckSmartWeb.Models
         {
 
         }
+        #endregion
+
+        #region DBSet properties
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Contractor> Contractors { get; set; }
         public DbSet<Shipment> Shipments { get; set; }
         public DbSet<Trip> Trips { get; set; }
         public DbSet<ServiceProvider> ServiceProviders { get; set; }
+        #endregion
 
+        #region Shipment management
         public List<Shipment> GetOpenShipments()
         {
             return Shipments.Include(s => s.Driver).Include(s => s.From).Include(s => s.To).Where(s => s.Driver == null).ToList();
@@ -67,8 +74,9 @@ namespace TruckSmartWeb.Models
             return shipment;
 
         }
+        #endregion
 
-
+        #region Emergency provider management
         public List<ServiceProvider> GetProviders()
         {
             return this.ServiceProviders.ToList();
@@ -84,7 +92,7 @@ namespace TruckSmartWeb.Models
             var id = (int) Math.Truncate(((new Random()).NextDouble() * (double)providers.Count));
             return providers[id];
         }
-
+        #endregion
 
     }
 }
