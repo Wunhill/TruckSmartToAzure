@@ -5,9 +5,9 @@ using System.Web;
 
 namespace TruckSmartWeb.Models
 {
-    public class Contractor
+    public class Driver
     {
-        public Guid ContractorID { get; set; }
+        public string DriverID { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
 

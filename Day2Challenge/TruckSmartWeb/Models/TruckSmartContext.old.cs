@@ -3,38 +3,48 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-using System.Configuration;
-using Newtonsoft.Json;
 
 namespace TruckSmartWeb.Models
 {
-    public class TruckSmartContext : DbContext
+    public class TruckSmartContextOld : DbContext
     {
-        private string driverID;
+        #region Database context configuration
+        //static TruckSmartContext()
+        //{
+        //    var init = new TruckSmartDBInitializer();
+        //    init.InitializeDatabase(new TruckSmartContext());
+        //}
+        #endregion
 
-        static TruckSmartContext()
-        {
-            //var init = new TruckSmartDBInitializer();
-            //init.InitializeDatabase(new TruckSmartContext());
-        }
+        #region Standard initialization
 
-        #region Database context setup
-        public TruckSmartContext() : this("name=TruckSmartDB")
+        public TruckSmartContextOld() : base("name=TruckSmartDB")
+
         {
 
         }
-        public TruckSmartContext(string connection) : base(connection)
+        public TruckSmartContextOld(string connection) : base(connection)
         {
-            driverID = System.Web.HttpContext.Current.Session["DriverID"].ToString();
+
         }
+        #endregion
+
+        #region DBSet properties
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Driver> Drivers { get; set; }
         public DbSet<Shipment> Shipments { get; set; }
         public DbSet<Trip> Trips { get; set; }
         public DbSet<ServiceProvider> ServiceProviders { get; set; }
         #endregion
+        private string driverID
+        {
+            get
+            {
+                return System.Configuration.ConfigurationManager.AppSettings["testDriverID"];
+            }
+        }
 
-        #region Shipment Management
+        #region Shipment management
         public List<Shipment> GetOpenShipments()
         {
             return Shipments.Include(s => s.Driver).Include(s => s.From).Include(s => s.To).Where(s => s.Driver == null).ToList();
@@ -76,12 +86,10 @@ namespace TruckSmartWeb.Models
         }
         #endregion
 
-        #region Emergency service providers
+        #region Emergency provider management
         public List<ServiceProvider> GetProviders()
         {
-
-            var results = this.ServiceProviders.ToList();
-            return results;
+            return this.ServiceProviders.ToList();
         }
         public ServiceProvider GetNearestProvider(double latitude, double longitude)
         {
@@ -94,7 +102,7 @@ namespace TruckSmartWeb.Models
             var id = (int)Math.Truncate(((new Random()).NextDouble() * (double)providers.Count));
             return providers[id];
         }
-
         #endregion
+
     }
 }
