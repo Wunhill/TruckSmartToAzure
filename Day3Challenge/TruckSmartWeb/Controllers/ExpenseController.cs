@@ -48,7 +48,7 @@ namespace TruckSmartWeb.Controllers
         {
             return View(new Expense
             {
-                DriverID = WebApiApplication.CurrentUser
+                DriverID = Session["DriverID"].ToString()
             });
         }
         [HttpPost]

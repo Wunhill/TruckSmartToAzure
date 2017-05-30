@@ -11,6 +11,13 @@ namespace TruckSmartWeb.Models
 {
     public class TruckSmartContext:DbContext
     {
+        private string driverID
+        {
+            get
+            {
+                return System.Web.HttpContext.Current.Session["DriverID"].ToString();
+            }
+        }
         #region redis setup
         //private static Lazy<ConnectionMultiplexer> lazyConnection = new Lazy<ConnectionMultiplexer>(() =>
         //{
@@ -29,11 +36,11 @@ namespace TruckSmartWeb.Models
         #endregion
 
         #region Database initialization
-        //static TruckSmartContext()
-        //{
-        //    var init = new TruckSmartDBInitializer();
-        //    init.InitializeDatabase(new TruckSmartContext());
-        //}
+        static TruckSmartContext()
+        {
+            var init = new TruckSmartDBInitializer();
+            init.InitializeDatabase(new TruckSmartContext());
+        }
         #endregion
 
         #region Context object initialization
@@ -62,7 +69,7 @@ namespace TruckSmartWeb.Models
         }
         public List<Shipment> GetMyShipments()
         {
-            return Shipments.Include(s => s.Driver).Include(s => s.From).Include(s => s.To).Where(s => (s.Driver != null) && (s.Driver.DriverID == WebApiApplication.CurrentUser)).ToList();
+            return Shipments.Include(s => s.Driver).Include(s => s.From).Include(s => s.To).Where(s => (s.Driver != null) && (s.Driver.DriverID == this.driverID)).ToList();
 
         }
         public Shipment GetShipment(Guid id)
@@ -77,7 +84,7 @@ namespace TruckSmartWeb.Models
             {
                 throw new InvalidOperationException("This shipment is already reserved");
             }
-            var driver = Drivers.First(d => d.DriverID == WebApiApplication.CurrentUser);
+            var driver = Drivers.First(d => d.DriverID == this.driverID);
             shipment.Driver = driver;
             SaveChanges();
             return shipment;
@@ -86,7 +93,7 @@ namespace TruckSmartWeb.Models
         public Shipment ReleaseShipment(Guid id)
         {
             var shipment = Shipments.Include(s => s.Driver).Include(s => s.From).Include(s => s.To).Where(s => s.ShipmentID == id).First();
-            if((shipment.Driver == null) || (shipment.Driver.DriverID != WebApiApplication.CurrentUser))
+            if((shipment.Driver == null) || (shipment.Driver.DriverID != this.driverID))
             {
                 throw new InvalidOperationException("This shipment is not reserved for the current driver.");
             }
@@ -174,7 +181,7 @@ namespace TruckSmartWeb.Models
                     SaveExpense(new Expense
                     {
                         ExpenseID = Guid.NewGuid(),
-                        DriverID = WebApiApplication.CurrentUser,
+                        DriverID = this.driverID,
                         ShipmentID = shipment.ShipmentID,
                         ExpenseType = ExpenseTypeEnum.Lodging,
                         Date = shipment.Scheduled.AddDays(-lcv),
@@ -189,7 +196,7 @@ namespace TruckSmartWeb.Models
                     SaveExpense(new Expense
                     {
                         ExpenseID = Guid.NewGuid(),
-                        DriverID = WebApiApplication.CurrentUser,
+                        DriverID = this.driverID,
                         ShipmentID = shipment.ShipmentID,
                         ExpenseType = ExpenseTypeEnum.Toll,
                         Date = shipment.Scheduled.AddDays(-lcv),

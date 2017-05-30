@@ -151,4 +151,3 @@ D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day2Challenge\Truc
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day2Challenge\TruckSmartWeb\bin\System.Web.Http.Owin.xml
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day2Challenge\TruckSmartWeb\obj\Debug\TruckSmartWeb.dll
 D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day2Challenge\TruckSmartWeb\obj\Debug\TruckSmartWeb.pdb
-D:\Courses\4480 - Azure Dev Bootcamp\github\TruckSmartToAzure\Day2Challenge\TruckSmartWeb\obj\Debug\TruckSmartWeb.csprojResolveAssemblyReference.cache

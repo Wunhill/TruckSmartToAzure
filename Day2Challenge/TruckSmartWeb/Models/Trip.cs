@@ -9,7 +9,7 @@ namespace TruckSmartWeb.Models
     {
         public Guid TripID { get; set; }
         public Shipment Shipment { get; set; }
-        public Contractor Contractor { get; set; }
+        public Driver Contractor { get; set; }
         public DateTime Date { get; set; }
         public GeoPoint Start { get; set; }
         public GeoPoint End { get; set; }

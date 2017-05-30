@@ -11,22 +11,22 @@ namespace TruckSmartWeb.Models
     {
         protected override void Seed(TruckSmartContext context)
         {
-            var testDriverID = new Guid(ConfigurationManager.AppSettings["testDriverID"]);
+            var testDriverID = ConfigurationManager.AppSettings["testDriverID"];
             var testCustomerID = new Guid(ConfigurationManager.AppSettings["testCustomerID"]);
             var testShipmentID = new Guid(ConfigurationManager.AppSettings["testShipmentID"]);
 
             //Create Test driver
-            var testDriver = new Contractor
+            var testDriver = new Driver
             {
-                ContractorID = testDriverID,
+                DriverID = testDriverID,
                 Email = "gkane@wunhill.com",
                 Name = "George Kane"
             };
-            context.Contractors.Add(testDriver);
+            context.Drivers.Add(testDriver);
             //Create additional driver
-            context.Contractors.Add(new Contractor
+            context.Drivers.Add(new Driver
             {
-                ContractorID = Guid.NewGuid(),
+                DriverID = Guid.NewGuid().ToString(),
                 Name = "Glenda King",
                 Email = "gking@wunhill.com"
             });
