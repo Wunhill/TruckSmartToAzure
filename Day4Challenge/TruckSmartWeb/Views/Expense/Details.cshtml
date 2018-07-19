@@ -1,0 +1,101 @@
+﻿@model TruckSmartWeb.Models.Expense
+@using TruckSmartWeb.Models
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Expense</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipmentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipmentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasReceipt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasReceipt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceiptURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceiptURL)
+        </dd>
+        @if (Model.ExpenseType == ExpenseTypeEnum.Toll)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Location)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Location)
+            </dd>
+        }
+        @if (Model.ExpenseType == ExpenseTypeEnum.Lodging)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Hotel)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Hotel)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Room)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Room)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DirectBill)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DirectBill)
+            </dd>
+        }
+        @if (Model.HasReceipt)
+        {
+            <dt>Receipt</dt>
+            <dd>
+                <div> @Html.Raw(Model.ReceiptURL)</div>
+                <img src="@Model.ReceiptURL" height="300" width="300" />
+            </dd>
+        }
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

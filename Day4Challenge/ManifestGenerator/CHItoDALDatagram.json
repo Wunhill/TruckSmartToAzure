@@ -1,0 +1,16 @@
+{
+    "ContractorID": "83cc4c1a-390a-4f97-9484-b576d3fd5f2a",
+    "ShipmentID": "b5e9e1c6-7f84-4a6c-a04c-639421d8ae5f",
+    "Date": "2017-04-03T12:42:16.2547931-04:00",
+    "Start": {
+        "Latitude": 42.0576749,
+        "Longitude": -88.042574
+    },
+    "End": {
+        "Latitude": 32.859068,
+        "Longitude": -96.930252
+    },
+    "Delivered": true,
+    "ServerAddress": "127.0.0.1",
+    "ClientAddress": "127.0.0.1"
+}

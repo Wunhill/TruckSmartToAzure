@@ -1,0 +1,50 @@
+﻿@model IEnumerable<TruckSmartWeb.Models.Expense>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpenseType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.HasReceipt)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpenseType)
+            </td>
+           <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.HasReceipt)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { ExpenseID = item.ExpenseID })
+            </td>
+        </tr>
+    }
+
+</table>
