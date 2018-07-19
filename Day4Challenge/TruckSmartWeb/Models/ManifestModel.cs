@@ -11,27 +11,14 @@ namespace TruckSmartWeb.Models
     public class ManifestModel
     {
         /// <summary>
-        /// Accept and process a Manifest request.  The algorythm is based on a StackOverflow post:
-        /// http://stackoverflow.com/questions/365826/calculate-distance-between-2-gps-coordinates
-        /// I did some basic testing and it seems pretty legitimate.
+        /// Accept and process a Manifest request.  Use the Distance calculation engine to compute the distance.
         /// </summary>
         /// <param name="datagram">Input request</param>
         /// <returns>Manifest Response - simple POCO with results</returns>
         public static ManifestResponse ProcessMessage(ManifestRequest datagram)
         {
-
-            var earthRadiusKm = 6371;
-
-            var dLat = degreesToRadians(datagram.End.Latitude - datagram.Start.Latitude);
-            var dLon = degreesToRadians(datagram.End.Longitude - datagram.Start.Longitude);
-
-            var lat1 = degreesToRadians(datagram.End.Latitude);
-            var lat2 = degreesToRadians(datagram.Start.Latitude);
-
-            var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
-                    Math.Sin(dLon / 2) * Math.Sin(dLon / 2) * Math.Cos(lat1) * Math.Cos(lat2);
-            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
-            var distance = earthRadiusKm * c;
+            //TASK: Use the distance calculation engine here
+            var distance = -1;
             var output =  new ManifestResponse() { ServerAddress = System.Environment.MachineName, ClientAddress = datagram.ClientAddress, Distance = distance, Status = distance < 1000 ? ManifestStatus.Accepted : ManifestStatus.Pending };
             saveData(datagram, output);
             return output;
