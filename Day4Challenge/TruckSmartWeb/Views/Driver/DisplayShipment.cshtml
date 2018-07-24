@@ -51,7 +51,7 @@
 </div>
 <p>
     @Html.ActionLink("Back to List", "Index")
-    @if (Model.Scheduled > DateTime.Now.AddDays(3) && Model.Driver != null && Model.Driver.DriverID == WebApiApplication.CurrentUser) {
+    @if (Model.Scheduled > DateTime.Now.AddDays(3) && Model.Driver != null && Model.Driver.DriverID == System.Web.HttpContext.Current.Session["DriverID"].ToString()) {
     <text> |</text>
         @Html.ActionLink("Release", "ReleaseShipment", new { id = Model.ShipmentID })
     }
